@@ -1,7 +1,11 @@
 Cette application permet de remplir un calendrier de production en fonction des disponibilités, de vérifier toutes les erreurs de saisie possibles, de parcourir le calendrier,  de créer une commande, de chercher une disponibilité,  de confirmer une date de production, d'actualiser et d'afficher  le calendrier de production.  La page s'ouvre avec les champs déjà saisies  par défaut,  à modifier  selon les besoins. 
+
 Veillez prêter attention aux messages d’erreurs  de saisie  qui  viendraient éventuellement remplacer le message « saisie OK »
+
 1. On définit d'abord le calendrier des disponibilités de production : une plage de dates est calculée à partir d'une date de début et d'un nombre de jours. Le nombre de disponibilités est de trois par jours, sauf les samedis et dimanches
+
 2.  On saisit ensuite les commandes en portefeuille : une commande comporte un numéro (unique), réfère à un client identifié par son code, comporte une date de création et une date souhaitée de livraison. Une liste de produit est initialisée dans le projet. Ceci permet la sélection du produit commandé.
+
 3. Le calcul de la date de production tient compte d'un délai de 4 jours (constante dans le code). Une disponibilité "verte" indique qu'aucune production n'y est associée. Une disponibilité "orange" indique qu'une commande dont l'acompte n'est pas versé y est associée. Une disponibilité "rouge" indique qu'une commande dont l'acompte est versé y est associée.
 
 NB, chaque journée  comporte 3 disponibilités, la production d’une commande dont le produit est complexe ne peut être confirmée pour  le début de journée. 
